@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>表单</title>
+<script>
+	function showemail(){
+		var emailElement = document.getElementById("email");
+		//alert("email " + emailElement.value);
+		// /^正则$/.text(要检测的数据);
+		
+		//邮箱正则验证
+		if(/^\w+@\w+\.\w+$/.test(emailElement.value)){
+			alert("email正确");
+		}else{
+			alert("email不正确");	
+		}
+	}
+</script>
+
+</head>
+
+<body>
+	<form action="show.html" method="post">
+			请输入email地址：<input type="text" name="email" id="email" value="">
+			<button type="submit" onclick="showemail()">显示内容</button>
+	</form>
+
+</body>
+</html>
